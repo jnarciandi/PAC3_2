@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+form { margin: 20px;}
+</style>
+</head>
+<h5>Add new Medicament</h5>
+<body>
+	<form action="insertMed">
+		<div class="form-group">
+			<label for="name">Name:</label> <input type="text" name="name"
+				class="form-control" id="name" />
+
+			<div class="form-group">
+				<label for="price">Price:</label><input type="text"
+					name="price" class="form-control" id="price" />
+			</div>
+			<div class="form-group">
+				<label for="description">Description:</label><input type="text" name="description"
+					class="form-control" id="description" />
+			</div>
+			<div class="form-group">
+				<label for="producer">Producer:</label><input type="text" name="producer"
+					class="form-control" id="producer" />
+			</div>
+			
+			<div class="form-group">
+				<label for="category">Category:</label><input type="text" name="category"
+					class="form-control" id="category" />
+			</div>
+			
+			<div class="form-group">
+				<label for="stockquantity">Stock:</label><input type="text" name="stockquantity"
+					class="form-control" id="stockquantity" />
+			</div>
+			
+			<div class="form-group">
+				<label for="stockinorder">Stock Order:</label><input type="text" name="stockinorder"
+					class="form-control" id="stockinorder" />
+			</div>
+			
+			<div class="form-group">
+				<label for="active">Active:</label><input type="text" name="active"
+					class="form-control" id="active" />
+			</div>
+									
+			<div class="form-group">
+			<input type="submit" value="SEND" class="btn btn-primary btn-sm" />
+		</div>
+		</div>
+
+	</form>
+</body>
+</html>

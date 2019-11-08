@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link rel="stylesheet" href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+table , form {
+	margin:20px;
+}
+
+</style>
+</head>
+<h5> Stock</h5>
+<table>
+<tr>
+	<th>Id</th>
+	<th>Name</th>
+	<th>Price</th>
+	<th>Description</th>
+	<th>Producer</th>
+	<th>Category</th>
+	<th>Stock</th>
+<!-- 	<th>Add</th> -->
+<!-- 	<th>Sold</th> -->
+	<th>Stock Order</th>
+	<th>Active</th>
+	<th>Edit</th>
+	<th>Delete</th>
+
+
+</tr>
+
+<table>
+	<tr th:each="medicament:${stock}">
+
+		<td th:text="${medicament.medicamentID}"></td>
+		<td th:text="${medicament.name}"></td>
+		<td th:text="${medicament.price}"></td>
+		<td th:text="${medicament.description}"></td>
+		<td th:text="${medicament.producer}"></td>
+		<td th:text="${medicament.category}"></td>
+		<td th:text="${medicament.stockquantity}"></td>
+<!-- 		<td><a th:href="@{addMed(medicamentID=${medicament.medicamentID})}"   -->
+<!--                class="btn btn-primary btn-sm">ADD</a></td> -->
+<!--         <td><a th:href="@{soldMed(medicamentID=${medicament.medicamentID})}"   -->
+<!--                class="btn btn-primary btn-sm">SOLD</a></td> -->
+		<td th:text="${medicament.stockinorder}"></td>
+		<td th:text="${medicament.isActive}"></td>
+
+            <td><a th:href="@{deleteMed(title=${book.title})}"  
+               class="btn btn-primary btn-sm">DELETE</a></td>
+
+	</tr>
+</table>
+
+<form action="newMedicament">
+<input type="submit" value="NEW" class="btn btn-primary btn-sm"/>
+
+</form>
+</html>

@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="medicament")
+@Table(name="medicaments")
 public class Medicament {
 	@Id
-	private String medicamentID;
+	private int medicamentID;
 	@Column(name="name")
 	private String name;
 	@Column(name="price")
@@ -20,18 +20,18 @@ public class Medicament {
 	private String producer;
 	@Column(name="category")
 	private String category;
-	@Column(name="stokquantity")
-	private long stockQuantity;
+	@Column(name="stockquantity")
+	private int stockQuantity;
 	@Column(name="stockinorder")
-	private long stockInOrder;
+	private int stockInOrder;
 	@Column(name="active")
 	private boolean active;
 	
 	public Medicament() {
-		
+		super();
 	}
 	
-	public Medicament(String medicamentID, String name, double price) {
+	public Medicament(int medicamentID, String name, double price) {
 		
 		this.name = name;
 		this.medicamentID = medicamentID;
@@ -39,11 +39,18 @@ public class Medicament {
 		
 	}
 	
-	public String getMedicamentID() {
+	public Medicament(int medicamentID) {
+		super();
+		this.medicamentID = medicamentID;
+		
+	}
+
+	
+	public int getMedicamentID() {
 		return medicamentID;
 	}
 
-	public void setMedicamentID(String medicamentID) {
+	public void setMedicamentID(int medicamentID) {
 		this.medicamentID = medicamentID;
 	}
 
@@ -87,19 +94,19 @@ public class Medicament {
 		this.category = category;
 	}
 
-	public long getStockQuantity() {
+	public int getStockQuantity() {
 		return stockQuantity;
 	}
 
-	public void setStockQuantity(long stockQuantity) {
+	public void setStockQuantity(int stockQuantity) {
 		this.stockQuantity = stockQuantity;
 	}
 
-	public long getStockInOrder() {
+	public int getStockInOrder() {
 		return stockInOrder;
 	}
 
-	public void setStockInOrder(long stockInOrder) {
+	public void setStockInOrder(int stockInOrder) {
 		this.stockInOrder = stockInOrder;
 	}
 
