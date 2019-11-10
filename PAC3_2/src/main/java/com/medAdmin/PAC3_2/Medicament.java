@@ -113,6 +113,10 @@ public class Medicament {
 	public boolean isActive() {
 		return active;
 	}
+	
+	public String isActiveS() {
+		return String.valueOf(active);
+	}
 
 	public void setActive(boolean active) {
 		this.active = active;

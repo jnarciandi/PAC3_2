@@ -42,15 +42,15 @@ table , form {
 		<td th:text="${medicament.description}"></td>
 		<td th:text="${medicament.producer}"></td>
 		<td th:text="${medicament.category}"></td>
-		<td th:text="${medicament.stockquantity}"></td>
+		<td th:text="${medicament.stockQuantity}"></td>
 <!-- 		<td><a th:href="@{addMed(medicamentID=${medicament.medicamentID})}"   -->
 <!--                class="btn btn-primary btn-sm">ADD</a></td> -->
 <!--         <td><a th:href="@{soldMed(medicamentID=${medicament.medicamentID})}"   -->
 <!--                class="btn btn-primary btn-sm">SOLD</a></td> -->
-		<td th:text="${medicament.stockinorder}"></td>
-		<td th:text="${medicament.isActive}"></td>
+		<td th:text="${medicament.stockInOrder}"></td>
+ 		<td th:text="${medicament.active}"></td>
 
-            <td><a th:href="@{deleteMed(title=${book.title})}"  
+            <td><a th:href="@{deleteMed(medicamentid=${medicament.medicamentID})}"  
                class="btn btn-primary btn-sm">DELETE</a></td>
 
 	</tr>

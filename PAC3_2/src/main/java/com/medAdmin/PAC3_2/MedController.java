@@ -20,7 +20,7 @@ public class MedController {
 		
 	}
 	
-	@RequestMapping("newMedicament")
+	@RequestMapping("/newMedicament")
 	public String newMed() {
 		return "medicaments/newMedicament.html";
 	}
