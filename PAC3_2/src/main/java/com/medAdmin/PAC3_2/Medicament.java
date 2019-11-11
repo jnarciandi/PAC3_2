@@ -2,13 +2,18 @@ package com.medAdmin.PAC3_2;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GenerationType;
 
 @Entity
 @Table(name="medicaments")
 public class Medicament {
+	//private static final String GenerationType = null;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "medicamentid", updatable = false, nullable = false)
 	private int medicamentID;
 	@Column(name="name")
 	private String name;

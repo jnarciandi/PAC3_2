@@ -1,5 +1,7 @@
 package com.medAdmin.PAC3_2;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,29 @@ public class MedService {
 		
 		repository.delete(med);
 	}
-
+	
+	
+	  public void addMed(Medicament medic) {
+		  
+	  Optional <Medicament> medO=repository.findById(medic.getMedicamentID());
+	  Medicament med= medO.get();
+	  med.setStockQuantity(med.getStockQuantity()+1);
+	  
+	  repository.save(med);
+	  }
+	  public void soldMed(Medicament medic) {
+		  
+		  Optional <Medicament> medO=repository.findById(medic.getMedicamentID());
+		  Medicament med= medO.get();
+		  if (med.getStockQuantity() > 0) {
+		  med.setStockQuantity(med.getStockQuantity()-1);
+		  }else {
+			  med.setStockQuantity(0);
+		  }
+		  
+		  repository.save(med);
+		  }
+	 
+	  
 
 }

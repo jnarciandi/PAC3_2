@@ -23,8 +23,8 @@ table , form {
 	<th>Producer</th>
 	<th>Category</th>
 	<th>Stock</th>
-<!-- 	<th>Add</th> -->
-<!-- 	<th>Sold</th> -->
+	<th>Add</th>
+	<th>Sold</th>
 	<th>Stock Order</th>
 	<th>Active</th>
 	<th>Edit</th>
@@ -43,10 +43,10 @@ table , form {
 		<td th:text="${medicament.producer}"></td>
 		<td th:text="${medicament.category}"></td>
 		<td th:text="${medicament.stockQuantity}"></td>
-<!-- 		<td><a th:href="@{addMed(medicamentID=${medicament.medicamentID})}"   -->
-<!--                class="btn btn-primary btn-sm">ADD</a></td> -->
-<!--         <td><a th:href="@{soldMed(medicamentID=${medicament.medicamentID})}"   -->
-<!--                class="btn btn-primary btn-sm">SOLD</a></td> -->
+		<td><a th:href="@{addMed(medicamentid=${medicament.medicamentID})}"  
+               class="btn btn-primary btn-sm">ADD</a></td>
+        <td><a th:href="@{soldMed(medicamentid=${medicament.medicamentID})}"  
+               class="btn btn-primary btn-sm">SOLD</a></td>
 		<td th:text="${medicament.stockInOrder}"></td>
  		<td th:text="${medicament.active}"></td>
 
